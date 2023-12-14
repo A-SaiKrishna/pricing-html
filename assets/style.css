@@ -7,6 +7,7 @@ body {
   /* background-position: center center; */
   font-family: "Montserrat", sans-serif;
   color: gray;
+  background-color: hsl(240, 78%, 98%);
 }
 h1 {
   margin-bottom: 1rem;
