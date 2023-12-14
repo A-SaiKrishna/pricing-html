@@ -1,0 +1,168 @@
+body {
+  background-image: url("/images/bg-top.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  font-family: "Roboto", sans-serif;
+}
+
+.heading {
+  height: 200px;
+  margin-top: 5em;
+  text-align: center;
+}
+.pricing {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.out {
+  display: flex;
+  justify-content: center;
+}
+
+.plan {
+  text-align: center;
+  height: 550px;
+  width: 20%;
+  padding-right: 2em;
+  font-family: "Roboto", sans-serif;
+  background-color: #ffffff;
+}
+.professional {
+  text-align: center;
+  height: 600px;
+  width: 20%;
+  font-family: "Roboto", sans-serif;
+  background-color: #6d71df;
+  color: white;
+}
+ul {
+  list-style: none;
+  margin-bottom: 15%;
+}
+li {
+  padding: 2em 0;
+  border-bottom: solid;
+}
+.basic {
+  order: 1;
+}
+.professional {
+  order: 2;
+}
+.master {
+  order: 3;
+}
+.learn-more {
+  border-style: none;
+  padding: 2% 20%;
+  margin-top: 20px;
+  text-decoration: none;
+  color: white;
+  background-color: #757ae2;
+}
+.plan:hover {
+  text-align: center;
+  height: 600px;
+  width: 20%;
+  font-family: "Roboto", sans-serif;
+  background-color: #6d71df;
+  color: white;
+}
+.basic:hover ~ .professional:not(:hover),
+.master:hover ~ .professional:not(:hover) {
+  text-align: center;
+  height: 550px;
+  width: 20%;
+  padding-right: 2em;
+  font-family: "Roboto", sans-serif;
+  background-color: #ffffff;
+  color: black;
+}
+.plan:hover .learn-more {
+  border-style: none;
+  padding: 2% 20%;
+  margin-top: 20px;
+  text-decoration: none;
+  color: #757ae2;
+  background-color: white;
+}
+
+/* for toggle*/
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: #2196f3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196f3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+h4 {
+  display: inline;
+}
+.discounted {
+  font-size: 2em;
+}
+.monthly,
+.anually {
+  font-size: 2em;
+}
+.monthly {
+  display: none;
+}

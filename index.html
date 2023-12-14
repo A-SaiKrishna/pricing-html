@@ -3,18 +3,28 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- displays site properly based on user's device -->
-
+    <link rel="stylesheet" href="./assets/style.css" />
     <link
       rel="icon"
       type="image/png"
       sizes="32x32"
       href="./images/favicon-32x32.png"
     />
-
+    <link
+      rel="preconnect"
+      href="https://fonts.googleapis.com"
+    />
+    <link
+      rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
     <title>Pricing component</title>
 
-    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
     <style>
       .attribution {
         font-size: 11px;
@@ -26,10 +36,76 @@
     </style>
   </head>
   <body>
-    Our Pricing Annually Monthly Basic &dollar;19.99 &dollar;199.99 500 GB
-    Storage 2 Users Allowed Send up to 3 GB Learn More Professional
-    &dollar;24.99 &dollar;249.99 1 TB Storage 5 Users Allowed Send up to 10 GB
-    Learn More Master &dollar;39.99 &dollar;399.99 2 TB Storage 10 Users Allowed
-    Send up to 20 GB Learn More
-  </body>
+    <section class="heading">
+      <h1>Our Pricing</h1>
+      <h4>Annually </h4>
+      <label class="switch sib">
+        <input type="checkbox" id="toggleCheckbox">
+        <span class="slider round"></span>
+      </label>
+      <h4>Monthly</h4>
+    </section>
+    <section class="pay">
+      <div class="pricing">
+        <div class="plan basic" />
+        <h1>Basic</h1>
+
+        <span class="discounted sib">
+          &dollar;<span class="monthly">19.99</span>
+          <span class="anually">199.99</span>
+        </span>
+        <ul>
+          <li>500 GB Storage</li>
+          <li>2 Users Allowed</li>
+          <li>Send up to 3 GB </li>
+        </ul>
+        <a class="learn-more" href="#">Learn More</a>
+      </div>
+      <div class="plan master">
+        <h1>Master</h1>
+        <span class="discounted sib">
+          &dollar;<span class="monthly">39.99</span>
+          <span class="anually">399.99</span>
+        </span>
+        <ul>
+          <li>2 TB Storage</li>
+          <li>10 Users Allowed</li>
+          <li>Send up to 20 GB</li>
+        </ul>
+        <a class="learn-more" href="#">Learn More</a>
+      </div>
+      <div class="plan professional">
+        <h1>Professional</h1>
+        <span class="discounted sib">
+          &dollar;<span class="monthly">24.99</span>
+          <span class="anually">249.99</span>
+        </span>
+        <ul>
+          <li>1 TB Storage</li>
+          <li>5 Users Allowed</li>
+          <li>Send up to 10 GB</li>
+        </ul>
+        <a class="learn-more" href="#">Learn More</a>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    const checkbox = document.getElementById('toggleCheckbox');
+    const monthlyElements = document.querySelectorAll('.monthly');
+    const annuallyElements = document.querySelectorAll('.anually');
+
+    checkbox.addEventListener('change', () => {
+      const isChecked = checkbox.checked;
+
+      monthlyElements.forEach((element) => {
+        element.style.display = isChecked ? 'block' : 'none';
+      });
+
+      annuallyElements.forEach((element) => {
+        element.style.display = isChecked ? 'none' : 'block';
+      });
+    });
+  </script>
+</body>
 </html>
