@@ -1,11 +1,16 @@
 body {
-  background-image: url("/images/bg-top.svg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
-  font-family: "Roboto", sans-serif;
-}
+  background-image: url(../images/bg-top.svg), url(../images/bg-bottom.svg);
+  background-position: top right, bottom left;
+  background-size: 30% 70%, 20% 30%;
 
+  background-repeat: no-repeat;
+  /* background-position: center center; */
+  font-family: "Montserrat", sans-serif;
+  color: gray;
+}
+h1 {
+  margin-bottom: 1rem;
+}
 .heading {
   height: 200px;
   margin-top: 5em;
@@ -23,27 +28,35 @@ body {
 
 .plan {
   text-align: center;
-  height: 550px;
+  height: 450px;
   width: 20%;
   padding-right: 2em;
-  font-family: "Roboto", sans-serif;
   background-color: #ffffff;
+  border-radius: 0.5rem;
+  box-shadow: 2px 4px 10px gray;
 }
 .professional {
   text-align: center;
-  height: 600px;
+  height: 500px;
   width: 20%;
-  font-family: "Roboto", sans-serif;
   background-color: #6d71df;
   color: white;
+  border-radius: 0.5rem;
 }
 ul {
   list-style: none;
-  margin-bottom: 15%;
+  margin-bottom: 3em;
+}
+.plan:hover ul {
+  margin-bottom: 5em;
+}
+.plan:not(:hover) .professional ul {
+  margin-bottom: 5em;
 }
 li {
-  padding: 2em 0;
+  padding: 1em 0;
   border-bottom: solid;
+  border-width: thin;
 }
 .basic {
   order: 1;
@@ -57,36 +70,57 @@ li {
 .learn-more {
   border-style: none;
   padding: 2% 20%;
-  margin-top: 20px;
   text-decoration: none;
   color: white;
   background-color: #757ae2;
+  border-radius: 0.5rem;
+  margin-top: 2em;
+}
+
+.professional .learn-more {
+  border-style: none;
+  padding: 2% 20%;
+  text-decoration: none;
+  color: #757ae2;
+  background-color: white;
+  border-radius: 0.5rem;
+  margin-top: 5em;
+}
+.plan:not(:hover) .professional .learn-more {
+  border-style: none;
+  padding: 2% 20%;
+  text-decoration: none;
+  color: #757ae2;
+  background-color: white;
+  border-radius: 0.5rem;
+  margin-top: 5em;
 }
 .plan:hover {
   text-align: center;
-  height: 600px;
+  height: 500px;
   width: 20%;
-  font-family: "Roboto", sans-serif;
   background-color: #6d71df;
   color: white;
+  border-radius: 0.5rem;
 }
 .basic:hover ~ .professional:not(:hover),
 .master:hover ~ .professional:not(:hover) {
   text-align: center;
-  height: 550px;
+  height: 450px;
   width: 20%;
   padding-right: 2em;
-  font-family: "Roboto", sans-serif;
   background-color: #ffffff;
-  color: black;
+  color: gray;
+  border-radius: 1rem;
 }
 .plan:hover .learn-more {
   border-style: none;
   padding: 2% 20%;
-  margin-top: 20px;
+  margin-top: 5rem;
   text-decoration: none;
   color: #757ae2;
   background-color: white;
+  border-radius: 0.5rem;
 }
 
 /* for toggle*/
@@ -96,6 +130,7 @@ li {
   display: inline-block;
   width: 60px;
   height: 34px;
+  margin: 0 2em;
 }
 
 /* Hide default HTML checkbox */
@@ -131,11 +166,11 @@ li {
 }
 
 input:checked + .slider {
-  background-color: #2196f3;
+  background-color: #757ae2;
 }
 
 input:focus + .slider {
-  box-shadow: 0 0 1px #2196f3;
+  box-shadow: 0 0 1px #757ae2;
 }
 
 input:checked + .slider:before {
@@ -157,7 +192,7 @@ h4 {
   display: inline;
 }
 .discounted {
-  font-size: 2em;
+  font-size: 1.5em;
 }
 .monthly,
 .anually {
@@ -165,4 +200,16 @@ h4 {
 }
 .monthly {
   display: none;
+}
+.under {
+  margin-top: 2em;
+  padding: 1em 0;
+  border-top: solid;
+  border-width: thin;
+}
+.header {
+  margin-bottom: 2em;
+}
+.professional ul {
+  margin-bottom: 5em;
 }
